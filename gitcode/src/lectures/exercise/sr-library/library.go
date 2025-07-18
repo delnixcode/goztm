@@ -19,7 +19,46 @@
 
 package main
 
-import "fmt"
+import (
+	"time"
+)
+
+type Title string
+type UserName string
+
+type Book struct {
+	Title        Title
+	CheckedOutAt time.Time
+	CheckInAt    time.Time
+}
+type Books struct {
+	Items []Book
+}
+
+type User struct {
+	Name  UserName
+	Books []Book
+}
+type Users struct {
+	Items []User
+}
+
+type library struct {
+	books Books
+	users Users
+}
+
+func CheckOutBook(title Title, user User) {
+
+}
+
+func CheckInBook(title Title, user User) {
+
+}
+
+func RegisterUser() {
+
+}
 
 func main() {
 
